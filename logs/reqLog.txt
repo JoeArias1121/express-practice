@@ -1,0 +1,12 @@
+2025-02-16 01:21:08 - c20f8c7b-d46a-4403-a361-431800eb8dcf - GET - undefined - /css/styles.css
+2025-02-16 01:21:19 - 560e2806-d02f-4cdb-9e85-2f3315e9ddc2 - GET - undefined - /styles.css
+2025-02-16 01:21:29 - 7822afd3-286f-4e7b-b3df-5875ff7bc64d - GET - undefined - /
+2025-02-16 01:21:29 - 3fbf3761-7719-4ba9-844a-eb271d49f2b8 - GET - undefined - /css/styles.css
+2025-02-16 12:27:39 - fbb45ba9-0318-4bfe-a1b3-c0c27fa43e2a - POST - undefined - /data
+2025-02-16 12:30:07 - 27a4493c-9cfc-4c9b-8959-c872988b9871 - POST - undefined - /data
+2025-02-16 12:32:45 - eb687a20-2d6c-46d1-b32f-518f5f979c0b - POST - undefined - /data
+2025-02-16 12:33:00 - 93bdec38-554b-47ce-b236-3481dc9c4aff - POST - undefined - /data
+2025-02-16 13:03:21 - 661fda5d-66e4-4e2f-9735-1fbe0fabd13a - GET -  - /
+2025-02-16 13:03:21 - 91a26b6e-209b-4068-ab29-81889b30adf9 - GET -  - /css/styles.css
+2025-02-16 13:04:16 - 913fb35e-f7ed-4616-95d8-53deb437d7f8 - GET - undefined - /
+2025-02-16 13:04:16 - d9a6cc15-6e93-480c-a76d-ebf4c61c2173 - GET - undefined - /css/styles.css

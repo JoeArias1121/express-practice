@@ -10,3 +10,19 @@
 2025-02-16 13:03:21 - 91a26b6e-209b-4068-ab29-81889b30adf9 - GET -  - /css/styles.css
 2025-02-16 13:04:16 - 913fb35e-f7ed-4616-95d8-53deb437d7f8 - GET - undefined - /
 2025-02-16 13:04:16 - d9a6cc15-6e93-480c-a76d-ebf4c61c2173 - GET - undefined - /css/styles.css
+2025-02-17 17:10:07 - ac84d80d-e1b1-463b-90ab-2f94ea40f55b - POST - undefined - /data
+2025-02-17 17:22:04 - a6700cac-54a5-48c6-9e5d-52461edb724f - GET - undefined - /css/styles.css
+2025-02-17 17:22:07 - 5a9840ac-ff65-481c-a3ba-7a121a70d3d3 - GET - undefined - /
+2025-02-17 17:24:12 - 6f6c4673-4a1f-4154-bb44-416f1cab4e6f - GET - undefined - /
+2025-02-17 17:27:16 - e39a769b-af0f-4211-a681-bfe991d8dcbf - POST - https://www.google.com - /
+2025-02-17 17:27:27 - 62ab3f53-a0bd-4d39-a1ac-eb45b7189a93 - POST - https://www.google.com - /
+2025-02-17 17:31:30 - 8e55c4eb-28c6-4008-9d3d-74535e8e6c0c - GET - undefined - /
+2025-02-17 17:31:37 - c7e59b39-c058-47f4-aae5-d521e815d524 - POST - https://www.google.com - /
+2025-02-17 17:31:43 - ba25518e-6c1a-498e-b0e2-2e576c8a1033 - POST - https://www.google.com - /
+2025-02-17 17:32:00 - 684c3866-f81d-465f-b6c8-f4c19517d529 - GET - https://www.google.com - /
+2025-02-17 17:44:26 - 91a42e39-4222-4a48-9f46-131fd7ef47cf - GET - undefined - /
+2025-02-17 17:44:26 - 5309d2e9-bd19-4e0f-9f7b-d5b8ba3c8e08 - GET - undefined - /css/styles.css
+2025-02-17 17:46:43 - 184ae855-3738-4557-9eb0-d4a437a3b0e9 - GET - https://www.google.com - /
+2025-02-17 17:53:06 - 48d0fac8-7fcf-415b-966f-fdea3abb061a - GET - undefined - /
+2025-02-17 17:53:07 - ddcf7cfc-61bb-4de4-9d13-d8e81228fbc4 - GET - undefined - /css/styles.css
+2025-02-17 18:01:34 - 4d349bb8-1f84-4517-a2d8-a922715bd62b - GET - undefined - /

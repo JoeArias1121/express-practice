@@ -1,12 +1,11 @@
-import * as http from "http";
-import * as fs from "fs/promises";
 import express from "express";
-import * as path from "path";
+import path from "node:path";
 import { fileURLToPath } from "node:url";
 import cors from "cors";
 
 import { logEvent } from "./middleware/logEvents.js";
 import { EventEmitter } from "events";
+import subdirRouter from "./routes/subdirRouter.js";
 
 const app = express();
 const PORT = process.env.PORT || 3500;
@@ -36,6 +35,9 @@ app.use(express.json());
 // this is a builtin middleware that allows us to serve static files (html, css, js, images, etc and make it available for the client to access)
 app.use(express.static(path.join(dirname, "/public")));
 
+// making use of app.use to use the router from the subdirRouter file and have modular routes for organization
+app.use('/subdir', subdirRouter)
+
 // simple get request to send the index.html file to the client
 app.get("/", (req, res) => {
   res.sendFile("./views/index.html", { root: dirname });
@@ -46,6 +48,16 @@ app.post("/data", (req, res) => {
   res.send("Data recieved");
 });
 
+app.all("*", (req, res) => {
+  res.status(404).sendFile("./views/404.html", { root: dirname });
+  if (req.accepts("html")) {
+    res.sendFile("./views/404.html", { root: dirname });
+  } else if (req.accepts("json")) {
+    res.json({ error: "404 not found" });
+  } else {
+    res.type("text").send("404 not found")
+  }
+})
 // at the very end add a error handling middleware to catch any errors that may occur
 app.use((err, req, res, next) => { 
   console.error(err.stack);
@@ -55,20 +67,3 @@ app.use((err, req, res, next) => {
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
-
-
-const emitter = new EventEmitter();
-
-
-
-
-
-
-
-
-
-
-
-// emitter.on("log", logEvent)
-
-// emitter.emit("log", "I just made an event emitter!")

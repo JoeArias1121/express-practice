@@ -46,7 +46,7 @@ app.use('/', rootRouter);
 app.use('/subdir', subdirRouter)
 app.use('/api/players', playersRouter);
 
-// this is to catch ant routes that are not found and send a 404 status code
+// this is to catch any routes that are not found and send a 404 status code
 app.all("*", (req, res) => {
   res.status(404).sendFile("./views/404.html", { root: dirname });
   if (req.accepts("html")) {

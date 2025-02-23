@@ -99,3 +99,5 @@
 2025-02-23 10:40:10 - 9458c0a4-31ad-4189-981b-5c8cc2e4a582 - GET - https://www.google.com - /api/players/7
 2025-02-23 10:41:44 - 76fdc4e0-9586-44d5-a121-42a7f7187959 - GET - https://www.google.com - /api/players/7
 2025-02-23 10:41:55 - e460a539-0c6b-44c0-a95c-6dbe3d177dbc - GET - https://www.google.com - /api/players/5
+2025-02-23 11:31:09 - d03f9bd1-c6cc-41df-9597-bfcbdda2cc37 - GET - https://www.google.com - /api/players/5
+2025-02-23 11:42:00 - 625c2f65-75d0-45bb-821e-2b4be3e9ac3a - GET - https://www.google.com - /api/players/5

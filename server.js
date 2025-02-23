@@ -4,8 +4,11 @@ import { fileURLToPath } from "node:url";
 import cors from "cors";
 
 import { logEvent } from "./middleware/logEvents.js";
-import { EventEmitter } from "events";
+//import { EventEmitter } from "events";
+
 import subdirRouter from "./routes/subdirRouter.js";
+import rootRouter from "./routes/rootRouter.js";
+import playersRouter from "./routes/api/players.js";
 
 const app = express();
 const PORT = process.env.PORT || 3500;
@@ -33,21 +36,17 @@ app.use(express.urlencoded({ extended: false}))
 // this is a builtin middleware that allows us to parse the body of a request (json)
 app.use(express.json());
 // this is a builtin middleware that allows us to serve static files (html, css, js, images, etc and make it available for the client to access)
-app.use(express.static(path.join(dirname, "/public")));
+app.use('/', express.static(path.join(dirname, "/public")));
+// by default .use add '/' so when adding a subdirectory we need to specify the subdirectory in the first argument
+// reason why we have to do this with static files is because we need to tell the server to serve these file to the subdirectory
+app.use('/subdir', express.static(path.join(dirname, "/public")));
 
+app.use('/', rootRouter);
 // making use of app.use to use the router from the subdirRouter file and have modular routes for organization
 app.use('/subdir', subdirRouter)
+app.use('/api/players', playersRouter);
 
-// simple get request to send the index.html file to the client
-app.get("/", (req, res) => {
-  res.sendFile("./views/index.html", { root: dirname });
-});
-
-app.post("/data", (req, res) => {
-  console.log(req.body);
-  res.send("Data recieved");
-});
-
+// this is to catch ant routes that are not found and send a 404 status code
 app.all("*", (req, res) => {
   res.status(404).sendFile("./views/404.html", { root: dirname });
   if (req.accepts("html")) {
@@ -58,7 +57,7 @@ app.all("*", (req, res) => {
     res.type("text").send("404 not found")
   }
 })
-// at the very end add a error handling middleware to catch any errors that may occur
+// at the very end add a error handling middleware to catch any errors that may occur this is when there's an error in the server
 app.use((err, req, res, next) => { 
   console.error(err.stack);
 

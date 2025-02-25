@@ -101,3 +101,8 @@
 2025-02-23 10:41:55 - e460a539-0c6b-44c0-a95c-6dbe3d177dbc - GET - https://www.google.com - /api/players/5
 2025-02-23 11:31:09 - d03f9bd1-c6cc-41df-9597-bfcbdda2cc37 - GET - https://www.google.com - /api/players/5
 2025-02-23 11:42:00 - 625c2f65-75d0-45bb-821e-2b4be3e9ac3a - GET - https://www.google.com - /api/players/5
+2025-02-24 00:04:22 - bc54124c-545f-4272-a94a-be2ccf88ced5 - GET - https://www.google.com - /api/players/5
+2025-02-24 00:10:06 - e987947f-841e-4c83-b9fb-07ed694eaf2f - GET - https://www.google.com - /api/players/5
+2025-02-24 00:10:32 - 06e6a955-1ef0-4f2c-88c8-8cb9b5dda6c3 - GET - https://www.google.com - /api/players/5
+2025-02-24 19:41:40 - e99f7515-fa8b-40aa-8742-d3fcd989c34e - POST - https://www.google.com - /register
+2025-02-24 19:42:11 - d2fa3952-a902-4215-a9c7-f19feb26fa43 - POST - https://www.google.com - /register

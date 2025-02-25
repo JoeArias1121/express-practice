@@ -1,6 +1,4 @@
-import players from "../model/players.json" assert { type: "json" };
-
-let data = [...players];
+import data from "../model/players.json" assert { type: "json" };
 
 export const getAllPlayers = (req, res) => {
   res.json(data);
@@ -9,7 +7,7 @@ export const getAllPlayers = (req, res) => {
 export const getPlayer = (req, res) => {
   const player = data.find((player) => player.id === Number(req.params.id));
   if (!player) {
-    res.status(404).json({ message: "Player not found" });
+    res.status(400).json({ message: "Player not found" });
   }
   res.json(player);
 };

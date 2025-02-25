@@ -106,3 +106,5 @@
 2025-02-24 00:10:32 - 06e6a955-1ef0-4f2c-88c8-8cb9b5dda6c3 - GET - https://www.google.com - /api/players/5
 2025-02-24 19:41:40 - e99f7515-fa8b-40aa-8742-d3fcd989c34e - POST - https://www.google.com - /register
 2025-02-24 19:42:11 - d2fa3952-a902-4215-a9c7-f19feb26fa43 - POST - https://www.google.com - /register
+2025-02-24 20:07:31 - 6fd8a5b8-51cd-478d-b0e6-56e1e345b2c1 - POST - https://www.google.com - /auth
+2025-02-24 20:07:45 - a7982831-adfb-44f5-ab76-c86739988620 - POST - https://www.google.com - /auth

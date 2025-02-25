@@ -9,6 +9,7 @@ import corsOptions from "./configs/corsOptions.js";
 import subdirRouter from "./routes/subdirRouter.js";
 import rootRouter from "./routes/rootRouter.js";
 import registerRouter from "./routes/registerRouter.js";
+import authRouter from "./routes/authRouter.js";
 import playersRouter from "./routes/api/players.js";
 
 const app = express();
@@ -34,6 +35,7 @@ app.use('/subdir', express.static(path.join(dirname, "/public")));
 // routes
 app.use('/', rootRouter);
 app.use('/register', registerRouter);
+app.use('/auth', authRouter);
 app.use('/subdir', subdirRouter);
 app.use('/api/players', playersRouter);
 

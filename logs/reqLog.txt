@@ -108,3 +108,13 @@
 2025-02-24 19:42:11 - d2fa3952-a902-4215-a9c7-f19feb26fa43 - POST - https://www.google.com - /register
 2025-02-24 20:07:31 - 6fd8a5b8-51cd-478d-b0e6-56e1e345b2c1 - POST - https://www.google.com - /auth
 2025-02-24 20:07:45 - a7982831-adfb-44f5-ab76-c86739988620 - POST - https://www.google.com - /auth
+2025-02-25 17:57:09 - e9eaf0f0-9026-40d4-b5e5-7bdce79a8926 - POST - https://www.google.com - /register
+2025-02-25 19:50:43 - c4e53da1-a00e-41ea-ade1-a4c0550940be - POST - https://www.google.com - /auth
+2025-02-25 19:51:41 - 1ae79b75-6679-40cd-95b6-e8871188453b - POST - https://www.google.com - /api/players
+2025-02-25 19:52:22 - f15ed32f-c05b-4bf3-96f2-c67a54278d23 - POST - https://www.google.com - /api/players
+2025-02-25 19:52:43 - 3e316e5e-6a32-4767-8d1b-d1e95ea3d390 - POST - https://www.google.com - /api/players
+2025-02-25 19:54:52 - 346a4130-8a90-4a76-a692-955661c9f8e6 - GET - https://www.google.com - /api/players
+2025-02-25 19:56:45 - d74df20f-acaa-42b6-8e39-c9161290fbdd - GET - https://www.google.com - /auth
+2025-02-25 19:57:39 - 414c1aab-aed5-4a1b-a11b-1f21e3d0439f - POST - https://www.google.com - /auth
+2025-02-25 19:58:20 - b411ca84-5f34-43ec-96f3-ca2bb25e61e0 - GET - https://www.google.com - /api/players
+2025-02-25 19:58:44 - 2d3852ac-89c6-45e4-aa4f-82dc6454a16f - GET - https://www.google.com - /api/players

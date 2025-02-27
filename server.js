@@ -10,7 +10,10 @@ import subdirRouter from "./routes/subdirRouter.js";
 import rootRouter from "./routes/rootRouter.js";
 import registerRouter from "./routes/registerRouter.js";
 import authRouter from "./routes/authRouter.js";
+import refreshRouter from "./routes/refreshRouter.js";
 import playersRouter from "./routes/api/players.js";
+import verifyJWT from "./middleware/verifyJWT.js";
+import cookieParser from "cookie-parser";
 
 const app = express();
 const PORT = process.env.PORT || 3500;
@@ -28,6 +31,9 @@ app.use(express.urlencoded({ extended: false }))
 // built-in middleware that parses JSON bodies
 app.use(express.json());
 
+// middleware for cookies
+app.use(cookieParser());
+
 // serve static files
 app.use('/', express.static(path.join(dirname, "/public")));
 app.use('/subdir', express.static(path.join(dirname, "/public")));
@@ -36,7 +42,9 @@ app.use('/subdir', express.static(path.join(dirname, "/public")));
 app.use('/', rootRouter);
 app.use('/register', registerRouter);
 app.use('/auth', authRouter);
+app.use('/refresh', refreshRouter);
 app.use('/subdir', subdirRouter);
+app.use(verifyJWT);
 app.use('/api/players', playersRouter);
 
 app.all("*", (req, res) => {

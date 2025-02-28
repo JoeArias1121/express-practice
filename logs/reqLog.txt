@@ -135,3 +135,8 @@
 2025-02-27 17:11:33 - e492dd93-f657-4910-a54b-f40f5faf91a3 - POST - undefined - /auth
 2025-02-27 17:14:45 - 1dae1e65-36cf-4779-887b-b95e1d997752 - POST - undefined - /auth
 2025-02-27 17:14:53 - f35cf835-b944-4fca-9847-ed5c040bb207 - GET - undefined - /refresh
+2025-02-27 18:25:32 - b2973168-74d0-4897-98cd-b68f2b888d0b - POST - undefined - /auth
+2025-02-27 18:25:49 - 7bc34934-6b0f-43e3-9a4b-d108d549549a - GET - undefined - /logout
+2025-02-27 18:26:26 - c7efc780-b7ea-44f6-892c-4b646458bac4 - GET - undefined - /refresh
+2025-02-27 18:28:11 - c8aa56ad-fb07-4c91-b884-53e1356016d6 - GET - undefined - /refresh
+2025-02-27 18:28:35 - 927c1420-92da-4018-82ca-1c50fdcc7323 - POST - undefined - /auth

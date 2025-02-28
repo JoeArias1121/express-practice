@@ -11,12 +11,11 @@ const usersDB = {
 
 export const handleRefreshToken = (req, res) => {
   const cookies = req.cookies
-  // checking to see if the username and password are provided
+  // checking to see if the jwt is provided in cookie
   if (!cookies?.jwt) {
     // if one isn't provided then req failed
-    return res.status(401)
+    return res.sendStatus(401)
   }
-  console.log(cookies.jwt)
   const refreshToken = cookies.jwt;
   // finding user in the database
   const foundUser = usersDB.users.find((user) => user.refreshToken === refreshToken);

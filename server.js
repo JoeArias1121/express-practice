@@ -11,7 +11,9 @@ import rootRouter from "./routes/rootRouter.js";
 import registerRouter from "./routes/registerRouter.js";
 import authRouter from "./routes/authRouter.js";
 import refreshRouter from "./routes/refreshRouter.js";
+import logoutRouter from "./routes/logoutRouter.js";
 import playersRouter from "./routes/api/players.js";
+import credentials from "./middleware/credentials.js";
 import verifyJWT from "./middleware/verifyJWT.js";
 import cookieParser from "cookie-parser";
 
@@ -21,6 +23,9 @@ const dirname = path.dirname(fileURLToPath(import.meta.url));
 
 
 app.use(logEvent);
+
+// and fetch cookies credentials requirement
+app.use(credentials);
 
 // Cross Origin Resource Sharing
 app.use(cors(corsOptions));
@@ -43,6 +48,7 @@ app.use('/', rootRouter);
 app.use('/register', registerRouter);
 app.use('/auth', authRouter);
 app.use('/refresh', refreshRouter);
+app.use('/logout', logoutRouter);
 app.use('/subdir', subdirRouter);
 app.use(verifyJWT);
 app.use('/api/players', playersRouter);

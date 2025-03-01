@@ -1,7 +1,6 @@
 import users from "../model/users.json" assert { type: "json" };
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-import "dotenv/config";
 import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";

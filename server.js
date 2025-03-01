@@ -1,3 +1,4 @@
+import "dotenv/config.js";
 import express from "express";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -16,6 +17,11 @@ import playersRouter from "./routes/api/players.js";
 import credentials from "./middleware/credentials.js";
 import verifyJWT from "./middleware/verifyJWT.js";
 import cookieParser from "cookie-parser";
+import mongoose from "mongoose";
+import connectDB from "./configs/dbConn.js";
+
+// Connect to MongoDB
+connectDB();
 
 const app = express();
 const PORT = process.env.PORT || 3500;
@@ -69,7 +75,10 @@ app.use((err, req, res, next) => {
 
   res.status(500).send("Something went wrong in the server!");
 });
-
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+// only listen for event if connected to DB
+mongoose.connection.once('open', () => {
+  console.log('Connected to MongoDB');
+  app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+  });
 });

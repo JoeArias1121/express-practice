@@ -24,7 +24,15 @@ export const handleNewUser = async (req, res) => {
   }
   try {
     const hashedPassword = await bcrypt.hash(password, 10);
-    const newUser = { username, password: hashedPassword };
+    // creating a new user object
+    const newUser = {
+      username,
+      "roles": {
+        "User": 2001
+      },
+      "password": hashedPassword
+    };
+    // adding the new user to the usersDB
     usersDB.setUsers([...usersDB.users, newUser]);
     await fs.writeFile(
       path.join(__dirname, '..', 'model', 'users.json'),

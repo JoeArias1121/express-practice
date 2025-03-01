@@ -34,11 +34,17 @@ export const handleLogin = async (req, res) => {
   const match = await bcrypt.compare(password, foundUser.password);
   // if match is true then we can create jwt tokens
   if (match) {
+    const roles = Object.values(foundUser.roles);
     // creating jwt tokens
     const accessToken = jwt.sign(
-      { username: foundUser.username },
+      {
+        UserInfo: {
+          username: foundUser.username,
+          roles,
+        },
+      },
       process.env.ACCESS_TOKEN_SECRET,
-      { expiresIn: "1m" }
+      { expiresIn: "30m" }
     );
     const refreshToken = jwt.sign(
       { username: foundUser.username },
@@ -55,7 +61,12 @@ export const handleLogin = async (req, res) => {
       path.join(__dirname, "..", "model", "users.json"),
       JSON.stringify(usersDB.users)
     );
-    res.cookie('jwt', refreshToken, { httpOnly: true, sameSite: 'None', secure: true, maxAge: 24 * 60 * 60 * 1000 });
+    res.cookie("jwt", refreshToken, {
+      httpOnly: true,
+      sameSite: "None",
+      secure: true,
+      maxAge: 24 * 60 * 60 * 1000,
+    });
     res.json({ accessToken });
   } else {
     // if no match then req failed

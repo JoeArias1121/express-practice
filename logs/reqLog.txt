@@ -192,3 +192,5 @@
 2025-02-28 20:30:56 - df614822-6a31-48bf-a2cc-2aa88440db34 - GET - undefined - /refresh
 2025-02-28 20:31:46 - 35990b73-11e8-4bd7-8f12-15dde4ddab87 - GET - undefined - /refresh
 2025-02-28 20:31:48 - c56e8209-437b-453c-baaf-af1d6eca21f7 - GET - undefined - /refresh
+2025-03-01 11:49:22 - 875fda07-afd3-43d0-b921-acb49d788344 - GET - undefined - /api/players
+2025-03-01 11:49:24 - fc553492-c769-4cbd-ac42-1163e4bb633a - GET - undefined - /favicon.ico

@@ -197,3 +197,13 @@
 2025-03-03 23:34:19 - 0ac620ab-8b0e-4520-90b7-516f0de0bf60 - GET - undefined - /register
 2025-03-03 23:35:29 - a5de9b26-9555-4f87-b115-783fa4b178f9 - POST - undefined - /register
 2025-03-03 23:36:08 - cc9ec61f-b946-42ca-aeea-6c7cefba7a19 - POST - undefined - /register
+2025-03-04 17:33:06 - ec85519a-dcd7-49a7-a9bc-683b663a3b5f - POST - undefined - /auth
+2025-03-04 17:40:40 - 93c8878b-e990-4b0c-8ac7-b457461cd22e - POST - undefined - /auth
+2025-03-04 18:05:06 - 64bc2b70-3acb-4fa4-acfa-046fd24d6cb2 - POST - undefined - /logout
+2025-03-04 18:05:20 - 62b17393-dfa5-4823-95a5-9ac2a63350bb - POST - undefined - /auth
+2025-03-04 18:05:38 - 904f94b1-5082-4a8d-8dc8-dfce95e42614 - GET - undefined - /auth
+2025-03-04 18:05:49 - 22375913-0d16-4394-9867-04793354aaab - GET - undefined - /logout
+2025-03-04 18:07:06 - 6b95b44a-c696-4831-a0bb-0b1d5a45290c - GET - undefined - /auth
+2025-03-04 18:07:11 - 7a658222-89dc-4a8b-b37d-bd75d05fd0b6 - POST - undefined - /auth
+2025-03-04 18:10:54 - ea9b567b-3143-42a5-8d65-456aab738bf5 - GET - undefined - /logout
+2025-03-04 18:11:47 - 2f25cf5c-1315-4579-838a-9480ed6888e1 - GET - undefined - /logout

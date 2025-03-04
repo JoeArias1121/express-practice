@@ -1,5 +1,4 @@
 import User from '../model/User.js';
-import { fileURLToPath } from 'node:url';
 import bcrypt from 'bcrypt';
 
 

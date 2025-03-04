@@ -1,15 +1,7 @@
-import users from '../model/users.json' assert { type: "json"};
-import fs from 'node:fs/promises';
-import path from 'node:path';
+import User from '../model/User.js';
 import { fileURLToPath } from 'node:url';
 import bcrypt from 'bcrypt';
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-
-const usersDB = {
-  users: users,
-  setUsers: function (data) { this.users = data }
-}
 
 export const handleNewUser = async (req, res) => { 
   const { username, password } = req.body;
@@ -17,28 +9,23 @@ export const handleNewUser = async (req, res) => {
   if (!username || !password) {
     return res.status(400).json({ message: 'Username and password are required' });
   }
+
   // checking to see if the username already exists
-  const duplicate = usersDB.users.find(user => user.username === username)
+  const duplicate = await User.findOne({ username }).exec();
   if (duplicate) {
-    return res.status(409).json({ message: 'Username already exists' });
+    return res.sendStatus(409).json({ message: 'Username already exists' }); // 409 Conflict
   }
   try {
     const hashedPassword = await bcrypt.hash(password, 10);
     // creating a new user object
-    const newUser = {
+    // creaye and store the new user
+    const result = await User.create({
       username,
-      "roles": {
-        "User": 2001
-      },
       "password": hashedPassword
-    };
-    // adding the new user to the usersDB
-    usersDB.setUsers([...usersDB.users, newUser]);
-    await fs.writeFile(
-      path.join(__dirname, '..', 'model', 'users.json'),
-      JSON.stringify(usersDB.users)
-    );
-    console.log(usersDB.users)
+    });
+
+    console.log(result);
+    
     res.status(201).json({ message: `User ${username} created successfully` });
   } catch (error) { 
     res.status(500).json({ 'message': error.message})

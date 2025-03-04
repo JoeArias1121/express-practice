@@ -194,3 +194,6 @@
 2025-02-28 20:31:48 - c56e8209-437b-453c-baaf-af1d6eca21f7 - GET - undefined - /refresh
 2025-03-01 11:49:22 - 875fda07-afd3-43d0-b921-acb49d788344 - GET - undefined - /api/players
 2025-03-01 11:49:24 - fc553492-c769-4cbd-ac42-1163e4bb633a - GET - undefined - /favicon.ico
+2025-03-03 23:34:19 - 0ac620ab-8b0e-4520-90b7-516f0de0bf60 - GET - undefined - /register
+2025-03-03 23:35:29 - a5de9b26-9555-4f87-b115-783fa4b178f9 - POST - undefined - /register
+2025-03-03 23:36:08 - cc9ec61f-b946-42ca-aeea-6c7cefba7a19 - POST - undefined - /register

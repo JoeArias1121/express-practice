@@ -1,6 +1,7 @@
 const verifyRoles = (...allowedRoles) => {
   return (req, res, next) => {
     if (!req?.roles) {
+      console.log("No roles found");
       return res.sendStatus(401); // unauthorized
     }
     const rolesArray = [...allowedRoles];

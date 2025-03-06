@@ -1,14 +1,7 @@
-import users from "../model/users.json" assert { type: "json" };
+import User from "../model/User.js";
 import jwt from "jsonwebtoken";
 
-const usersDB = {
-  users: users,
-  setUsers: function (data) {
-    this.users = data;
-  },
-};
-
-export const handleRefreshToken = (req, res) => {
+export const handleRefreshToken = async (req, res) => {
   const cookies = req.cookies;
   // checking to see if the jwt is provided in cookie
   if (!cookies?.jwt) {
@@ -17,11 +10,10 @@ export const handleRefreshToken = (req, res) => {
   }
   const refreshToken = cookies.jwt;
   // finding user in the database
-  const foundUser = usersDB.users.find(
-    (user) => user.refreshToken === refreshToken
-  );
+  const foundUser =  await User.findOne({ refreshToken }).exec();
   if (!foundUser) {
     // if not found then req failed
+    console.log("Forbidden");
     return res.sendStatus(403); // forbidden
   }
   // evaluate jwt

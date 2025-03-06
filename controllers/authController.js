@@ -42,12 +42,13 @@ export const handleLogin = async (req, res) => {
     );
     try {
       // updating the user object with the refresh token
-      const currentUser = await User.findOneAndUpdate({ username }, { refreshToken }).exec();
-      console.log(`User ${currentUser.username} logged in`);
+      foundUser.refreshToken = refreshToken;
+      foundUser.save();
+      console.log(`User ${foundUser.username} logged in`);
       res.cookie("jwt", refreshToken, {
         httpOnly: true,
         sameSite: "None",
-        secure: true,
+        //secure: true,
         maxAge: 24 * 60 * 60 * 1000,
       });
       res.json({ accessToken });

@@ -56,7 +56,7 @@ app.use('/auth', authRouter);
 app.use('/refresh', refreshRouter);
 app.use('/logout', logoutRouter);
 app.use('/subdir', subdirRouter);
-app.use(verifyJWT);
+app.use(verifyJWT); // to access the routes below, you need to be authenticated (have valid authorization token)
 app.use('/api/players', playersRouter);
 
 app.all("*", (req, res) => {
